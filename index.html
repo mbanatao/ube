@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ube 3-in-1 Coffee Candy | Sarap na, Healthy pa! ♡</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ube: {
+                            50: '#F7F2FC',
+                            100: '#EDE2F8',
+                            200: '#D9C2F0',
+                            300: '#BE9AE4',
+                            400: '#9E6CD3',
+                            500: '#7D44BC',
+                            600: '#622B9E',
+                            700: '#4E2082',
+                            800: '#3D1867',
+                            900: '#2A0F49',
+                        },
+                        stevia: {
+                            100: '#EBF5E6',
+                            400: '#76B852',
+                            500: '#569438',
+                            600: '#417528',
+                            700: '#2F571C',
+                        },
+                        gold: {
+                            200: '#F9E8A2',
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#AA8620',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Dancing Script"', 'cursive'],
+                        display: ['"Pacifico"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom 3D Card & Foil Wrapper Styles */
+        .perspective-1000 {
+            perspective: 1200px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+
+        /* Realistic Foil Crimp Seal Edges (matching sachet top/bottom/side seals) */
+        .foil-crimp-top {
+            background: repeating-linear-gradient(
+                90deg,
+                #693B99 0px,
+                #8B5BBF 3px,
+                #542B82 6px
+            );
+        }
+        .foil-crimp-side {
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(78, 32, 130, 0.35) 0px,
+                rgba(255, 255, 255, 0.25) 2px,
+                rgba(58, 22, 102, 0.4) 4px
+            );
+        }
+
+        /* Candy Swirl Animation */
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes floatGentle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .animate-spin-slow {
+            animation: spinSlow 22s linear infinite;
+        }
+        .animate-float {
+            animation: floatGentle 4.5s ease-in-out infinite;
+        }
+
+        /* Pouch Gloss Reflection */
+        .pouch-gloss {
+            background: linear-gradient(
+                125deg,
+                rgba(255,255,255,0.35) 0%,
+                rgba(255,255,255,0.0) 35%,
+                rgba(255,255,255,0.12) 50%,
+                rgba(255,255,255,0.0) 65%,
+                rgba(42,15,73,0.18) 100%
+            );
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F2FC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7D44BC;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-ube-50 text-ube-900 font-sans antialiased selection:bg-ube-600 selection:text-white overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-ube-900 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium border-b border-gold-500/30">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-stevia-500 text-white">PANG-MASA PRICE DROP</span>
+            <span>Your favorite <strong>3-in-1 Ube Stevia Coffee Candy</strong> starts at just <strong>₱1.40 per piece (₱35 / pouch)!</strong></span>
+            <span class="font-script text-gold-200 text-base ml-1">Sarap na, Healthy pa! ♡</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-ube-200/70 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-ube-600 via-ube-700 to-ube-900 p-0.5 shadow-md group-hover:scale-105 transition">
+                    <div class="w-full h-full rounded-[14px] border border-gold-400/70 flex flex-col items-center justify-center bg-ube-800 text-white">
+                        <span class="text-[9px] font-extrabold tracking-widest text-gold-200 uppercase leading-none">3 in 1</span>
+                        <span class="font-display text-sm text-white leading-tight">Ube</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="font-display text-2xl text-ube-800 tracking-tight">Ube</span>
+                        <span class="text-xs font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-ube-100 text-ube-800 border border-ube-300">Coffee Candy</span>
+                    </div>
+                    <p class="font-script text-sm text-ube-600 -mt-1">Sarap na, Healthy pa! ♡</p>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-ube-800">
+                <a href="#wrapper-showcase" class="hover:text-ube-600 transition">Interactive Pack</a>
+                <a href="#candy-anatomy" class="hover:text-ube-600 transition">3-in-1 Swirl</a>
+                <a href="#stevia-health" class="hover:text-ube-600 transition">Why Stevia?</a>
+                <a href="#shop-candies" class="hover:text-ube-600 transition">Shop Pouches</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <button onclick="triggerCandyPop()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-ube-100 hover:bg-ube-200 text-ube-800 font-bold text-xs sm:text-sm transition shadow-sm border border-ube-300">
+                    <span>🍬</span>
+                    <span>Pop a Candy!</span>
+                </button>
+                <button onclick="toggleCartDrawer(true)" class="relative inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-ube-700 to-ube-800 hover:from-ube-800 hover:to-ube-900 text-white font-bold text-xs sm:text-sm shadow-md transition border border-gold-400/50">
+                    <svg class="w-4 h-4 text-gold-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                    </svg>
+                    <span>Candy Bag</span>
+                    <span id="cart-badge" class="w-5 h-5 rounded-full bg-stevia-500 text-white text-xs flex items-center justify-center font-extrabold">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="wrapper-showcase" class="relative py-12 lg:py-20 overflow-hidden bg-gradient-to-b from-ube-100/70 via-ube-50 to-white">
+        <!-- Decorative Ambient Background Blobs -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-ube-300/30 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 -right-24 w-96 h-96 rounded-full bg-stevia-400/20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Brand Story & Controls -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-ube-200 shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-stevia-500 animate-ping"></span>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-ube-800">Coffee • Creamer • Stevia Sugar</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ube-900 tracking-tight leading-[1.1]">
+                        Your Cup of <span class="font-display text-ube-600 font-normal">Ube</span> Coffee, Now in a <span class="text-transparent bg-clip-text bg-gradient-to-r from-ube-700 via-ube-500 to-stevia-600">Pocket Candy!</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-ube-800/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Enjoy the creamy and delicious taste of real Philippine purple yam & roasted coffee, made healthier with <strong>Stevia Sugar</strong>. No hot water needed—just unwrap and savor your guilt-free energy boost anywhere!
+                    </p>
+
+                    <!-- 3 Key Packaging Pillars (Directly from Sachet Front) -->
+                    <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 pt-2">
+                        <div class="bg-white/90 p-3 rounded-2xl border border-ube-200 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div class="w-9 h-9 rounded-full bg-stevia-100 text-stevia-600 flex items-center justify-center mb-2 font-bold">
+                                🌿
+                            </div>
+                            <span class="text-xs font-extrabold text-ube-900 uppercase">Lower Calorie</span>
+                            <span class="text-[11px] text-ube-600">vs. regular sugar</span>
+                        </div>
+                        <div class="bg-white/90 p-3 rounded-2xl border border-ube-200 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div class="w-9 h-9 rounded-full bg-stevia-100 text-stevia-600 flex items-center justify-center mb-2 font-bold">
+                                🚫
+                            </div>
+                            <span class="text-xs font-extrabold text-ube-900 uppercase">No Added</span>
+                            <span class="text-[11px] text-ube-600">Refined Sugar</span>
+                        </div>
+                        <div class="bg-white/90 p-3 rounded-2xl border border-ube-200 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div class="w-9 h-9 rounded-full bg-stevia-100 text-stevia-600 flex items-center justify-center mb-2 font-bold">
+                                🌱
+                            </div>
+                            <span class="text-xs font-extrabold text-ube-900 uppercase">Made With</span>
+                            <span class="text-[11px] text-ube-600">Stevia Plant</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+                        <a href="#shop-candies" class="px-7 py-4 rounded-2xl bg-gradient-to-r from-ube-700 to-ube-900 hover:from-ube-800 hover:to-black text-white font-extrabold text-sm sm:text-base shadow-xl shadow-ube-700/25 border border-gold-400/60 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <span>Get 25-pc Candy Pouch</span>
+                            <span class="px-2.5 py-0.5 rounded-lg bg-gold-500 text-ube-900 font-black">Only ₱35</span>
+                        </a>
+                        <button onclick="flipCandyPack()" class="px-6 py-4 rounded-2xl bg-white hover:bg-ube-100 text-ube-900 font-bold text-sm sm:text-base border-2 border-ube-300 shadow-sm transition flex items-center gap-2">
+                            <svg class="w-5 h-5 text-ube-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                            </svg>
+                            <span id="flip-btn-text">Flip Pouch (See Back)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive 3D Front & Back Candy Pouch Replica -->
+                <div class="lg:col-span-6 flex flex-col items-center">
+                    <!-- Pack View Switcher Tabs -->
+                    <div class="inline-flex p-1.5 rounded-2xl bg-ube-200/70 border border-ube-300 mb-6 shadow-inner">
+                        <button id="tab-front" onclick="setPackSide(false)" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition bg-ube-800 text-white shadow">
+                            Front of Pack
+                        </button>
+                        <button id="tab-back" onclick="setPackSide(true)" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition text-ube-800 hover:bg-ube-100">
+                            Back of Pack (Facts & Prep)
+                        </button>
+                        <button onclick="triggerCandyPop()" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition text-stevia-700 hover:bg-stevia-100 flex items-center gap-1">
+                            <span>✨</span> Taste Test
+                        </button>
+                    </div>
+
+                    <!-- 3D Flip Container Modeled Directly After User's Sachet Images -->
+                    <div class="perspective-1000 w-full max-w-[390px] sm:max-w-[420px]">
+                        <div id="pouch-3d-card" class="relative w-full h-[540px] sm:h-[565px] transform-style-3d cursor-pointer" onclick="flipCandyPack()">
+                            
+                            <!-- ================= FRONT OF CANDY SACHET ================= -->
+                            <div class="absolute inset-0 w-full h-full rounded-[22px] shadow-2xl overflow-hidden backface-hidden border border-ube-300 flex flex-col justify-between select-none"
+                                 style="background: radial-gradient(circle at 50% 42%, #EFE6F7 0%, #D5BPEA 48%, #9B73C7 90%, #7C51AC 100%); background-color: #D8C2EF;">
+                                
+                                <!-- Top Foil Crimp Edge -->
+                                <div class="h-4 w-full foil-crimp-top border-b border-ube-900/20 shrink-0"></div>
+
+                                <!-- Left & Right Foil Seal Borders -->
+                                <div class=" absolute inset-y-0 left-0 w-4 foil-crimp-side pointer-events-none z-20"></div>
+                                <div class=" absolute inset-y-0 right-0 w-4 foil-crimp-side pointer-events-none z-20"></div>
+                                <div class=" absolute inset-0 pouch-gloss pointer-events-none z-20"></div>
+
+                                <!-- Main Front Content Area -->
+                                <div class="relative z-10 px-6 flex-1 flex flex-col items-center justify-between py-1">
+                                    
+                                    <!-- Top Purple & Gold Shield Header ("3 IN 1 COFFEE CANDY") -->
+                                    <div class="w-4/5 bg-gradient-to-b from-ube-900 via-ube-800 to-ube-900 rounded-b-3xl border-b-2 border-x-2 border-gold-400 shadow-lg px-4 py-3 text-center -mt-1">
+                                        <div class="text-white font-extrabold text-xl sm:text-2xl tracking-wider leading-none">
+                                            3 <span class="text-sm align-middle">IN</span> 1
+                                        </div>
+                                        <div class="text-white font-extrabold text-2xl sm:text-[26px] tracking-widest leading-tight">
+                                            COFFEE CANDY
+                                        </div>
+                                        <div class="text-[9px] sm:text-[10px] font-bold tracking-widest text-gold-200 uppercase mt-0.5">
+                                            COFFEE • CREAMER • STEVIA SUGAR
+                                        </div>
+                                    </div>
+
+                                    <!-- Script "Ube FLAVOR" Title -->
+                                    <div class="text-center my-1 relative">
+                                        <div class="font-display text-6xl sm:text-7xl text-ube-800 drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] leading-none select-none">
+                                            Ube
+                                        </div>
+                                        <div class="text-xs font-extrabold tracking-[0.28em] text-ube-900 uppercase mt-1 ml-12">
+                                            FLAVOR CHEWS & DROPS
+                                        </div>
+                                    </div>
+
+                                    <!-- Center Visual: Swirled Ube Coffee Candy Bowl + Raw Ube Slices + Stevia Badge -->
+                                    <div class="relative w-full h-48 sm:h-52 flex items-center justify-center my-1">
+                                        
+                                        <!-- Main Purple Candy Dish / Giant Glossy Swirl Candy SVG -->
+                                        <div class="relative z-10 flex items-center justify-center">
+                                            <svg class="w-44 h-44 sm:w-48 sm:h-48 drop-shadow-xl" viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Twist Wrapper Ends (Translucent Purple Foil) -->
+                                                <path d="M12 65 C35 72, 48 85, 55 98 C45 110, 30 125, 10 130 C20 105, 20 90, 12 65 Z" fill="#8B5BBF" fill-opacity="0.55" stroke="#F3E5AB" stroke-width="1.5"/>
+                                                <path d="M208 65 C185 72, 172 85, 165 98 C175 110, 190 125, 210 130 C200 105, 200 90, 208 65 Z" fill="#8B5BBF" fill-opacity="0.55" stroke="#F3E5AB" stroke-width="1.5"/>
+                                                
+                                                <!-- Purple Coffee Cup Rim Base holding the Giant Swirled Candy -->
+                                                <path d="M44 105 C44 152, 74 176, 110 176 C146 176, 176 152, 176 105 Z" fill="url(#cupGrad)" stroke="#D4AF37" stroke-width="2.5"/>
+                                                <!-- Cup Handle -->
+                                                <path d="M46 115 C22 115, 22 152, 48 152" stroke="#622B9E" stroke-width="10" stroke-linecap="round" fill="none"/>
+                                                
+                                                <!-- Top Glossy 3-in-1 Ube Coffee Swirl Candy Dome -->
+                                                <ellipse cx="110" cy="102" rx="66" ry="38" fill="url(#ubeCandySwirl)" stroke="#E5C158" stroke-width="3"/>
+                                                
+                                                <!-- Creamy Ube & Espresso Candy Spiral Lines -->
+                                                <path d="M110 102 m-45 0 a 45 24 0 1 0 90 0 a 36 18 0 1 0 -72 0 a 25 12 0 1 0 50 0 a 12 6 0 1 0 -24 0" stroke="#F7F2FC" stroke-width="4.5" stroke-linecap="round" stroke-opacity="0.85" fill="none"/>
+                                                <path d="M110 102 m-35 3 a 35 18 0 1 1 70 0 a 22 11 0 1 1 -44 0" stroke="#4A2574" stroke-width="3" stroke-linecap="round" stroke-opacity="0.6" fill="none"/>
+
+                                                <!-- Candy Gloss Highlight -->
+                                                <ellipse cx="92" cy="84" rx="26" ry="8" transform="rotate(-12 92 84)" fill="white" fill-opacity="0.55"/>
+
+                                                <!-- Sliced Raw Ube Root Tuber (Bottom Left just like Sachet) -->
+                                                <g transform="translate(22, 122)">
+                                                    <!-- Brown Root Skin -->
+                                                    <ellipse cx="22" cy="24" rx="22" ry="18" fill="#6E473B" stroke="#4A2E24" stroke-width="1.5"/>
+                                                    <!-- First Purple Yam Slice -->
+                                                    <circle cx="38" cy="30" r="18" fill="#622B9E" stroke="#8D5B4C" stroke-width="3"/>
+                                                    <circle cx="38" cy="30" r="13" fill="#8B44D6" stroke="#C896FF" stroke-width="1" stroke-dasharray="2 2"/>
+                                                    <!-- Second Purple Yam Slice -->
+                                                    <circle cx="52" cy="40" r="15" fill="#521E8A" stroke="#8D5B4C" stroke-width="2.5"/>
+                                                    <circle cx="52" cy="40" r="10" fill="#9E5BEB" stroke="#E2C4FF" stroke-width="1" stroke-dasharray="2 2"/>
+                                                </g>
+
+                                                <!-- Fresh Green Stevia Leaves (Bottom Right of Cup) -->
+                                                <g transform="translate(135, 148)">
+                                                    <path d="M0 15 Q 18 0, 36 10 Q 18 25, 0 15 Z" fill="#4E8736"/>
+                                                    <path d="M5 18 Q 22 14, 38 26 Q 18 34, 5 18 Z" fill="#68A347"/>
+                                                </g>
+
+                                                <defs>
+                                                    <linearGradient id="cupGrad" x1="44" y1="105" x2="176" y2="176" gradientUnits="userSpaceOnUse">
+                                                        <stop offset="0%" stop-color="#8B5BBF"/>
+                                                        <stop offset="50%" stop-color="#5E2D94"/>
+                                                        <stop offset="100%" stop-color="#3B1863"/>
+                                                    </linearGradient>
+                                                    <radialGradient id="ubeCandySwirl" cx="50%" cy="45%" r="55%">
+                                                        <stop offset="0%" stop-color="#E5D0F8"/>
+                                                        <stop offset="45%" stop-color="#AE7CE0"/>
+                                                        <stop offset="80%" stop-color="#763BB5"/>
+                                                        <stop offset="100%" stop-color="#4E2082"/>
+                                                    </radialGradient>
+                                                </defs>
+                                            </svg>
+                                        </div>
+
+                                        <!-- Right Badge: "MADE WITH STEVIA SUGAR - HEALTHIER CHOICE ♥" -->
+                                        <div class="absolute right-0 top-6 z-20 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-b from-white via-[#F6F9F2] to-[#E4F0DC] border-2 border-gold-500 shadow-lg flex flex-col items-center justify-center p-1.5 text-center">
+                                            <span class="text-[8px] font-extrabold tracking-wider text-ube-900 uppercase">MADE WITH</span>
+                                            <div class="flex items-center justify-center gap-0.5 my-0.5">
+                                                <span class="text-stevia-600 text-sm">🍃</span>
+                                            </div>
+                                            <span class="text-sm sm:text-base font-black text-stevia-600 leading-none tracking-tight">STEVIA</span>
+                                            <span class="text-[10px] font-extrabold text-stevia-700 leading-none">SUGAR</span>
+                                            <!-- Green Ribbon Banner -->
+                                            <div class="mt-1 bg-gradient-to-r from-stevia-600 via-stevia-500 to-stevia-600 text-white text-[7.5px] sm:text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-sm tracking-wider">
+                                                HEALTHIER CHOICE ♥
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom White Translucent Strip with 3 Icons (Lower Calorie | No Added Refined Sugar | Made with Stevia Plant) -->
+                                    <div class="w-full bg-white/60 backdrop-blur-sm rounded-xl px-2 py-2 border border-white/80 grid grid-cols-3 divide-x divide-ube-400/40 text-center shadow-sm">
+                                        <div class="px-1 flex flex-col items-center">
+                                            <div class="w-6 h-6 rounded-full border border-ube-800 flex items-center justify-center text-[11px] mb-0.5 text-ube-900 font-bold">🌱</div>
+                                            <span class="text-[8px] font-extrabold text-ube-900 uppercase leading-tight">LOWER CALORIE</span>
+                                            <span class="text-[7px] text-ube-800 leading-tight">vs. regular sugar</span>
+                                        </div>
+                                        <div class="px-1 flex flex-col items-center">
+                                            <div class="w-6 h-6 rounded-full border border-ube-800 flex items-center justify-center text-[11px] mb-0.5 text-ube-900 font-bold">⊘</div>
+                                            <span class="text-[8px] font-extrabold text-ube-900 uppercase leading-tight">NO ADDED</span>
+                                            <span class="text-[7px] text-ube-800 leading-tight">REFINED SUGAR</span>
+                                        </div>
+                                        <div class="px-1 flex flex-col items-center">
+                                            <div class="w-6 h-6 rounded-full border border-ube-800 flex items-center justify-center text-[11px] mb-0.5 text-ube-900 font-bold">🍃</div>
+                                            <span class="text-[8px] font-extrabold text-ube-900 uppercase leading-tight">MADE WITH</span>
+                                            <span class="text-[7px] text-ube-800 leading-tight">STEVIA PLANT</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Footer Row: "Sarap na, Healthy pa! ♡" and "NET WT. 100g (25 Candies)" -->
+                                    <div class="w-full flex items-end justify-between px-1 pt-1 pb-0.5 text-white drop-shadow">
+                                        <span class="font-script text-xl sm:text-2xl text-white">Sarap na, Healthy pa! ♡</span>
+                                        <div class="text-right leading-none">
+                                            <span class="block text-[8px] font-bold uppercase tracking-wider text-ube-100">NET WT.</span>
+                                            <span class="text-sm sm:text-base font-extrabold text-white">100g <span class="text-[10px] font-semibold">(25 pcs)</span></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Bottom Foil Crimp Edge -->
+                                <div class="h-4 w-full foil-crimp-top border-t border-ube-900/20 shrink-0"></div>
+                            </div>
+
+                            <!-- ================= BACK OF CANDY SACHET ================= -->
+                            <div class="absolute inset-0 w-full h-full rounded-[22px] shadow-2xl overflow-hidden backface-hidden rotate-y-180 border border-ube-300 flex flex-col justify-between select-none"
+                                 style="background: radial-gradient(circle at 60% 45%, #F2EBF9 0%, #D5BFEA 55%, #9B73C7 100%); background-color: #D8C2EF;">
+                                
+                                <!-- Top Foil Crimp Edge -->
+                                <div class="h-4 w-full foil-crimp-top border-b border-ube-900/20 shrink-0"></div>
+
+                                <!-- Side Foil Borders -->
+                                <div class="absolute inset-y-0 left-0 w-4 foil-crimp-side pointer-events-none z-20"></div>
+                                <div class="absolute inset-y-0 right-0 w-4 foil-crimp-side pointer-events-none z-20"></div>
+                                <div class="absolute inset-0 pouch-gloss pointer-events-none z-20"></div>
+
+                                <!-- Main Back Content Area (Directly modeled after Image 2) -->
+                                <div class="relative z-10 px-6 py-2 flex-1 flex flex-col justify-between">
+                                    
+                                    <!-- Top Row: Left Copy + Right Stevia Seal -->
+                                    <div class="grid grid-cols-12 gap-2 items-center pt-1">
+                                        <div class="col-span-7 space-y-1.5">
+                                            <h3 class="font-script text-2xl sm:text-3xl text-ube-900 leading-none">
+                                                Sarap na,<br>Healthy pa! ♡
+                                            </h3>
+                                            <p class="text-[10.5px] sm:text-[11px] text-ube-900 font-semibold leading-snug pt-1">
+                                                Enjoy the creamy and delicious taste of ube coffee candy, made healthier with <strong class="text-stevia-700">STEVIA SUGAR</strong>. A perfect pocket treat for your day, guilt-free.
+                                            </p>
+                                        </div>
+
+                                        <div class="col-span-5 flex flex-col items-center">
+                                            <div class="w-28 h-28 rounded-full bg-gradient-to-b from-white to-[#EBF5E6] border-2 border-gold-500 shadow-md flex flex-col items-center justify-center p-1.5 text-center">
+                                                <span class="text-[7.5px] font-extrabold text-ube-900 uppercase">MADE WITH</span>
+                                                <span class="text-sm">🍃</span>
+                                                <span class="text-base font-black text-stevia-600 leading-none">STEVIA</span>
+                                                <span class="text-[9.5px] font-extrabold text-stevia-700 leading-none">SUGAR</span>
+                                                <div class="mt-1 bg-stevia-600 text-white text-[7px] font-extrabold uppercase px-2 py-0.5 rounded-full leading-tight">
+                                                    A HEALTHIER SWEET CHOICE
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Middle Row: Left "HOW TO ENJOY" Box + Right Health Icons & Ingredients Box -->
+                                    <div class="grid grid-cols-12 gap-3 my-1 items-stretch">
+                                        
+                                        <!-- Left Purple Box (Adapted from PREPARATION box on sachet) -->
+                                        <div class="col-span-6 bg-ube-800 text-white rounded-2xl p-3 shadow-inner flex flex-col justify-between border border-ube-600">
+                                            <div class="text-[10px] font-extrabold uppercase tracking-wider text-gold-200 border-b border-ube-600 pb-1">
+                                                HOW TO ENJOY:
+                                            </div>
+                                            <div class="space-y-2.5 my-auto py-1">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="text-lg">🍬</span>
+                                                    <p class="text-[9.5px] leading-tight font-medium">1. Twist open the foil wrapper of your Ube Coffee Candy.</p>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <span class="text-lg">💜</span>
+                                                    <p class="text-[9.5px] leading-tight font-medium">2. Savor the creamy ube & roasted coffee swirl slowly.</p>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <span class="text-lg">⚡</span>
+                                                    <p class="text-[9.5px] leading-tight font-medium">3. 3 candies = 1 cup of Ube Coffee! Enjoy anywhere!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right Column: 3 Green Badges + Ingredients Box -->
+                                        <div class="col-span-6 flex flex-col justify-between space-y-2">
+                                            <!-- 3 Green Bullet Points -->
+                                            <div class="space-y-1.5 pl-1 border-l-2 border-ube-400/50">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-5 h-5 rounded-full bg-stevia-600 text-white text-[10px] flex items-center justify-center shrink-0">🌱</span>
+                                                    <div class="leading-none">
+                                                        <span class="block text-[9px] font-extrabold text-ube-900">LOWER CALORIE</span>
+                                                        <span class="text-[8px] text-ube-800">vs. regular sugar</span>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-5 h-5 rounded-full bg-stevia-600 text-white text-[10px] flex items-center justify-center shrink-0">🚫</span>
+                                                    <div class="leading-none">
+                                                        <span class="block text-[9px] font-extrabold text-ube-900">NO ADDED</span>
+                                                        <span class="text-[8px] text-ube-800">REFINED SUGAR</span>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-5 h-5 rounded-full bg-stevia-600 text-white text-[10px] flex items-center justify-center shrink-0">🍃</span>
+                                                    <div class="leading-none">
+                                                        <span class="block text-[9px] font-extrabold text-ube-900">MADE WITH</span>
+                                                        <span class="text-[8px] text-ube-800">STEVIA PLANT</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Ingredients & Allergen Box -->
+                                            <div class="border border-ube-800/60 rounded-xl p-2 bg-white/45 text-ube-900">
+                                                <div class="text-[8.5px] font-extrabold uppercase">INGREDIENTS:</div>
+                                                <p class="text-[8px] leading-tight mt-0.5 font-medium">
+                                                    Isomalt, Non-Dairy Creamer, Roasted Coffee Extract, Stevia Sweetener (Steviol Glycosides), Natural Ube Halaya Extract, Sea Salt.
+                                                </p>
+                                                <div class="text-[8.5px] font-extrabold uppercase mt-1.5">ALLERGEN INFORMATION:</div>
+                                                <p class="text-[8px] leading-tight font-medium">Contains Milk.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Row: Storage, Product of the Philippines & Interactive Barcode -->
+                                    <div class="grid grid-cols-12 gap-2 items-end pt-1 border-t border-ube-400/30">
+                                        <div class="col-span-6 text-[8px] text-ube-900 font-semibold space-y-1">
+                                            <p><strong>STORAGE:</strong> Store in a cool, dry place. Avoid direct sunlight.</p>
+                                            <p class="font-extrabold uppercase tracking-wider">🇵🇭 PRODUCT OF THE PHILIPPINES</p>
+                                            <div class="flex items-center gap-2 text-xs pt-0.5 text-ube-900">
+                                                <span>🚮</span>
+                                                <span>♻️</span>
+                                                <span class="text-[7.5px] font-bold text-ube-700">10 kcal / piece</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Interactive Barcode (Matches 4 806523 451234 from Image 2) -->
+                                        <div class="col-span-6">
+                                            <div onclick="event.stopPropagation(); scanBarcodePromo();"
+                                                 class="bg-white rounded-lg p-1.5 shadow-sm border border-ube-300 hover:border-stevia-500 transition group cursor-pointer text-center"
+                                                 title="Click to scan barcode for a surprise discount!">
+                                                <div class="h-8 w-full flex items-stretch justify-center gap-[1.5px] px-1">
+                                                    <div class="w-0.5 bg-black"></div><div class="w-1 bg-black"></div><div class="w-0.5 bg-white"></div>
+                                                    <div class="w-1.5 bg-black"></div><div class="w-0.5 bg-black"></div><div class="w-1 bg-white"></div>
+                                                    <div class="w-0.5 bg-black"></div><div class="w-1.5 bg-black"></div><div class="w-0.5 bg-black"></div>
+                                                    <div class="w-1 bg-white"></div><div class="w-1 bg-black"></div><div class="w-0.5 bg-black"></div>
+                                                    <div class="w-1.5 bg-black"></div><div class="w-0.5 bg-white"></div><div class="w-1 bg-black"></div>
+                                                    <div class="w-0.5 bg-black"></div><div class="w-1 bg-black"></div><div class="w-0.5 bg-white"></div>
+                                                    <div class="w-1.5 bg-black"></div><div class="w-0.5 bg-black"></div>
+                                                </div>
+                                                <div class="text-[9px] font-mono font-bold tracking-widest text-black mt-0.5 group-hover:text-stevia-600">
+                                                    4 806523 451234
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Bottom Foil Crimp Edge -->
+                                <div class="h-4 w-full foil-crimp-top border-t border-ube-900/20 shrink-0"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-ube-700 font-semibold mt-4 flex items-center gap-1.5">
+                        <span>👆 Click the pouch to flip between Front & Back, or click the barcode on the back!</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-in-1 Candy Anatomy Explorer -->
+    <section id="candy-anatomy" class="py-16 lg:py-24 bg-white border-y border-ube-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-ube-100 text-ube-700 border border-ube-200">Inside Every Piece</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-ube-900 mt-3">
+                    How We Turned <span class="font-display text-ube-600 font-normal">3-in-1 Ube Coffee</span> Into Candy
+                </h2>
+                <p class="text-ube-700/80 mt-3 text-sm sm:text-base">
+                    Every single 4g candy locks in the exact three pillars of our iconic sachet—<strong>Coffee, Creamer, and Stevia Sugar</strong>—swirled with authentic Philippine purple yam.
+                </p>
+            </div>
+
+            <!-- Interactive Candy Format Selector -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button onclick="selectCandyStyle('hard')" id="style-btn-hard" class="candy-style-btn px-5 py-3 rounded-2xl font-bold text-sm transition bg-ube-800 text-white shadow-md flex items-center gap-2">
+                    <span>🌀</span> 1. Classic Hard Swirl Drop
+                </button>
+                <button onclick="selectCandyStyle('chew')" id="style-btn-chew" class="candy-style-btn px-5 py-3 rounded-2xl font-bold text-sm transition bg-ube-100 text-ube-800 hover:bg-ube-200 flex items-center gap-2">
+                    <span>🍬</span> 2. Creamy Ube Latte Soft Chew
+                </button>
+                <button onclick="selectCandyStyle('burst')" id="style-btn-burst" class="candy-style-btn px-5 py-3 rounded-2xl font-bold text-sm transition bg-ube-100 text-ube-800 hover:bg-ube-200 flex items-center gap-2">
+                    <span>☕</span> 3. Center-Filled Espresso Ube Bomb
+                </button>
+            </div>
+
+            <!-- Anatomy Interactive Showcase Card -->
+            <div class="bg-gradient-to-br from-ube-50 via-white to-stevia-100/50 rounded-3xl p-6 sm:p-10 border border-ube-200 shadow-lg">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Left: Animated SVG Candy Cross-Section -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+                        <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-ube-200/60 to-white flex items-center justify-center shadow-inner border border-ube-200 relative">
+                            <svg id="anatomy-svg" class="w-52 h-52 animate-float drop-shadow-2xl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Outer Ube Halaya Shell -->
+                                <circle cx="100" cy="100" r="82" fill="url(#shellGrad)" stroke="#D4AF37" stroke-width="3"/>
+                                <!-- Triple Swirl Ribbon -->
+                                <path d="M100 100 m-62 0 a 62 62 0 1 0 124 0 a 46 46 0 1 0 -92 0 a 30 30 0 1 0 60 0" stroke="#F7F2FC" stroke-width="10" stroke-linecap="round" stroke-opacity="0.88" fill="none"/>
+                                <path d="M100 100 m-50 0 a 50 50 0 1 1 100 0 a 34 34 0 1 1 -68 0" stroke="#3B1C0A" stroke-width="6" stroke-linecap="round" stroke-opacity="0.65" fill="none"/>
+                                <!-- Center Core -->
+                                <circle id="anatomy-core" cx="100" cy="100" r="24" fill="#4A2574" stroke="#F9E8A2" stroke-width="2.5"/>
+                                <!-- Gloss Highlight -->
+                                <ellipse cx="72" cy="58" rx="28" ry="12" transform="rotate(-25 72 58)" fill="white" fill-opacity="0.6"/>
+                                <defs>
+                                    <radialGradient id="shellGrad" cx="40%" cy="35%" r="65%">
+                                        <stop offset="0%" stop-color="#C896FF"/>
+                                        <stop offset="55%" stop-color="#7D44BC"/>
+                                        <stop offset="100%" stop-color="#3D1867"/>
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+
+                            <!-- Floating Calorie Pill -->
+                            <div class="absolute -bottom-3 bg-stevia-600 text-white text-xs font-extrabold px-4 py-1.5 rounded-full shadow-md border border-white">
+                                <span id="anatomy-calories">Only 10 kcal per piece • 0g Refined Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: 3-in-1 Layer Breakdown & Flavor Meter -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <span id="anatomy-badge" class="text-xs font-extrabold uppercase tracking-wider text-stevia-600">Hard Glossy Swirl Edition</span>
+                            <h3 id="anatomy-title" class="text-2xl sm:text-3xl font-extrabold text-ube-900 mt-1">
+                                Classic 3-in-1 Ube Coffee Hard Drop
+                            </h3>
+                            <p id="anatomy-desc" class="text-ube-800/80 text-sm sm:text-base mt-2 leading-relaxed">
+                                Slow-melting glass-glossy candy that lasts 8 minutes on the tongue, releasing waves of velvety Ube Halaya, sweet non-dairy creamer, and bold roasted Philippine coffee sweetened naturally with Stevia leaf.
+                            </p>
+                        </div>
+
+                        <!-- The 3-in-1 Layers -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="p-4 rounded-2xl bg-white border border-ube-200 shadow-sm">
+                                <div class="text-xs font-extrabold text-ube-500 uppercase">Swirl 01</div>
+                                <div class="font-extrabold text-ube-900 text-base mt-0.5">Roasted Coffee</div>
+                                <p class="text-xs text-ube-700 mt-1">Real Arabica & Robusta coffee extract (20mg natural caffeine per 3 candies).</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white border border-ube-200 shadow-sm">
+                                <div class="text-xs font-extrabold text-ube-500 uppercase">Swirl 02</div>
+                                <div class="font-extrabold text-ube-900 text-base mt-0.5">Ube & Creamer</div>
+                                <p class="text-xs text-ube-700 mt-1">Velvety creamer infused with Bohol & Baguio purple yam (ube) flavor.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-stevia-100/70 border border-stevia-400/40 shadow-sm">
+                                <div class="text-xs font-extrabold text-stevia-700 uppercase">Swirl 03</div>
+                                <div class="font-extrabold text-stevia-700 text-base mt-0.5">Stevia Sugar</div>
+                                <p class="text-xs text-stevia-700 mt-1">Sweetened with Steviol Glycosides—zero glycemic spike & tooth-friendly!</p>
+                            </div>
+                        </div>
+
+                        <!-- Flavor Profile Bars -->
+                        <div class="space-y-2.5 pt-2">
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-ube-900 mb-1">
+                                    <span>Creamy Ube Halaya Richness</span>
+                                    <span id="bar-ube-val">95%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-ube-100 rounded-full overflow-hidden">
+                                    <div id="bar-ube" class="h-full bg-gradient-to-r from-ube-500 to-ube-700 rounded-full transition-all duration-500" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-ube-900 mb-1">
+                                    <span>Roasted Coffee Kick</span>
+                                    <span id="bar-coffee-val">80%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-ube-100 rounded-full overflow-hidden">
+                                    <div id="bar-coffee" class="h-full bg-gradient-to-r from-amber-700 to-ube-800 rounded-full transition-all duration-500" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-stevia-700 mb-1">
+                                    <span>Stevia Guilt-Free Sweetness</span>
+                                    <span id="bar-stevia-val">90%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-stevia-100 rounded-full overflow-hidden">
+                                    <div id="bar-stevia" class="h-full bg-gradient-to-r from-stevia-400 to-stevia-600 rounded-full transition-all duration-500" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Stevia Health & Calorie Comparison Section -->
+    <section id="stevia-health" class="py-16 lg:py-20 bg-gradient-to-b from-ube-900 via-ube-800 to-ube-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Copy: Sarap na, Healthy pa! -->
+                <div class="lg:col-span-6 space-y-5">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stevia-600/30 border border-stevia-400/50 text-stevia-100 text-xs font-extrabold uppercase tracking-wider">
+                        <span>🍃</span> Made With Stevia Sugar • A Healthier Sweet Choice
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+                        Why Switch to <span class="font-script text-gold-200 font-normal text-4xl sm:text-6xl">Sarap na, Healthy pa! ♡</span>
+                    </h2>
+                    <p class="text-ube-100/90 text-sm sm:text-base leading-relaxed">
+                        Regular coffee candies and 3-in-1 mixes pack up to 75% refined white sugar and corn syrup. Our <strong>Ube 3-in-1 Stevia Coffee Candy</strong> uses natural <em>Steviol Glycosides</em> extracted from the stevia leaf—giving you all the creamy ube latte indulgence with zero added refined sugar.
+                    </p>
+
+                    <!-- Comparison Table -->
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 overflow-hidden">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead>
+                                <tr class="border-b border-white/15 bg-white/5 text-gold-200 font-bold">
+                                    <th class="p-3.5">Per 3 Candies (12g Serving)</th>
+                                    <th class="p-3.5 text-center bg-stevia-600/30 text-white">Ube Stevia Candy</th>
+                                    <th class="p-3.5 text-center text-ube-200">Regular Coffee Candy</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10 font-medium">
+                                <tr>
+                                    <td class="p-3.5">Calories</td>
+                                    <td class="p-3.5 text-center font-extrabold text-stevia-400 bg-stevia-600/15">30 kcal</td>
+                                    <td class="p-3.5 text-center text-ube-200">65 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5">Added Refined Sugar</td>
+                                    <td class="p-3.5 text-center font-extrabold text-stevia-400 bg-stevia-600/15">0g</td>
+                                    <td class="p-3.5 text-center text-ube-200">11g</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5">Sweetener Source</td>
+                                    <td class="p-3.5 text-center font-extrabold text-stevia-400 bg-stevia-600/15">Stevia Leaf Plant 🌿</td>
+                                    <td class="p-3.5 text-center text-ube-200">Refined Cane / Corn Syrup</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5">Real Ube & Coffee</td>
+                                    <td class="p-3.5 text-center font-extrabold text-gold-200 bg-stevia-600/15">✓ Yes (3-in-1 Swirl)</td>
+                                    <td class="p-3.5 text-center text-ube-200">Artificial Flavoring</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Calculator Card -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white text-ube-900 rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-gold-400">
+                        <div class="flex items-center justify-between border-b border-ube-100 pb-4 mb-6">
+                            <div>
+                                <span class="text-xs font-extrabold uppercase tracking-wider text-stevia-600">Interactive Guilt-Free Meter</span>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-ube-900">Daily Sweet Craving Calculator</h3>
+                            </div>
+                            <span class="text-3xl">🧮</span>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="candy-slider" class="text-sm font-bold text-ube-800">How many coffee candies do you enjoy daily?</label>
+                                    <span id="slider-count-label" class="px-3 py-1 rounded-full bg-ube-800 text-white font-extrabold text-sm">6 Candies / day</span>
+                                </div>
+                                <input id="candy-slider" type="range" min="1" max="15" value="6" oninput="updateCalorieCalculator(this.value)"
+                                       class="w-full h-3 bg-ube-200 rounded-lg appearance-none cursor-pointer accent-ube-700">
+                                <div class="flex justify-between text-[11px] font-semibold text-ube-500 mt-1">
+                                    <span>1 pc (Quick Bite)</span>
+                                    <span>6 pcs (2 Cups of Coffee)</span>
+                                    <span>15 pcs (Study/Work Marathon)</span>
+                                </div>
+                            </div>
+
+                            <!-- Calculated Monthly Savings -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="p-4 rounded-2xl bg-stevia-100 border border-stevia-400/40 text-center">
+                                    <span class="text-xs font-bold text-stevia-700 uppercase">Refined Sugar Saved</span>
+                                    <div id="calc-sugar-saved" class="text-2xl sm:text-3xl font-black text-stevia-700 mt-1">660g</div>
+                                    <span class="text-[11px] text-stevia-600 font-medium">per month (≈ 165 tsp!)</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-ube-100 border border-ube-200 text-center">
+                                    <span class="text-xs font-bold text-ube-700 uppercase">Calories Saved</span>
+                                    <div id="calc-calories-saved" class="text-2xl sm:text-3xl font-black text-ube-800 mt-1">2,100</div>
+                                    <span class="text-[11px] text-ube-600 font-medium">kcal saved per month</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-center">
+                                    <span class="text-xs font-bold text-amber-900 uppercase">Coffee Equivalent</span>
+                                    <div id="calc-coffee-cups" class="text-2xl sm:text-3xl font-black text-amber-800 mt-1">2 Cups</div>
+                                    <span class="text-[11px] text-amber-700 font-medium">of Ube Latte per day</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ube-50 rounded-2xl p-4 border border-ube-200 flex items-center justify-between gap-4">
+                                <p class="text-xs text-ube-800 font-medium leading-relaxed">
+                                    💡 <strong>Pro Tip:</strong> Keep a pouch in your bag or office desk for an instant 3 PM pick-me-up without the sugar crash!
+                                </p>
+                                <a href="#shop-candies" class="shrink-0 px-4 py-2.5 rounded-xl bg-stevia-600 hover:bg-stevia-700 text-white font-bold text-xs transition shadow">
+                                    Stock Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop the Candy Collection -->
+    <section id="shop-candies" class="py-16 lg:py-24 bg-ube-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-stevia-100 text-stevia-700 border border-stevia-400/30">Direct From the Philippines 🇵🇭</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-ube-900 mt-3">
+                        Choose Your <span class="font-display text-ube-600 font-normal">Ube</span> Candy Pouch
+                    </h2>
+                </div>
+                <p class="text-sm text-ube-700 max-w-md">
+                    Every pouch is resealable and contains individually foil-wrapped candies modeled after our classic 3-in-1 Ube Coffee sachet.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Populated dynamically via JS for interactive filtering and cart actions -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ube-900 text-ube-100 border-t-4 border-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-ube-700">
+                <div class="md:col-span-5 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="font-display text-3xl text-white">Ube</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-gold-500 text-ube-900 font-extrabold text-xs uppercase">3-in-1 Coffee Candy</span>
+                    </div>
+                    <p class="font-script text-2xl text-gold-200">Sarap na, Healthy pa! ♡</p>
+                    <p class="text-xs text-ube-200 max-w-sm leading-relaxed">
+                        Crafted with real Philippine purple yam flavor, premium roasted coffee, creamy milk swirl, and natural Stevia plant sweetener. Zero added refined sugar.
+                    </p>
+                </div>
+
+                <div class="md:col-span-4 space-y-2 text-xs">
+                    <div class="font-extrabold text-gold-200 uppercase tracking-wider text-sm mb-2">Packaging Specs (Candy Edition)</div>
+                    <p><strong>Ingredients:</strong> Isomalt, Non-Dairy Creamer, Coffee Extract, Stevia Sweetener (Steviol Glycosides), Ube Flavor, Salt.</p>
+                    <p><strong>Allergen Information:</strong> Contains Milk.</p>
+                    <p><strong>Storage:</strong> Store in a cool, dry place. Avoid direct sunlight.</p>
+                    <p class="pt-1 font-bold text-stevia-400">🇵🇭 PROUD PRODUCT OF THE PHILIPPINES</p>
+                </div>
+
+                <div class="md:col-span-3 flex flex-col justify-between bg-ube-800/80 p-4 rounded-2xl border border-ube-600">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase tracking-wider text-gold-200">Sachet Barcode Easter Egg</span>
+                        <p class="text-xs text-ube-200 mt-1">Click the official pack barcode below to unlock <strong>15% OFF</strong> your candy bag:</p>
+                    </div>
+                    <button onclick="scanBarcodePromo()" class="mt-3 w-full bg-white text-black py-2 px-3 rounded-xl font-mono text-xs font-extrabold tracking-widest hover:bg-gold-200 transition shadow">
+                        |||| |||| 4 806523 451234
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-ube-300 gap-4">
+                <p>© 2026 Ube 3-in-1 Stevia Coffee Candy Philippines. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <span>Lower Calorie vs. Regular Sugar</span>
+                    <span>•</span>
+                    <span>No Added Refined Sugar</span>
+                    <span>•</span>
+                    <span>Made With Stevia Plant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slide-Over Shopping Cart Drawer -->
+    <div id="cart-drawer-backdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-ube-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+        <!-- Drawer Header -->
+        <div class="p-5 bg-ube-900 text-white flex items-center justify-between border-b border-gold-500/40">
+            <div>
+                <h3 class="font-extrabold text-lg flex items-center gap-2">
+                    <span>🍬</span> Your Ube Candy Bag
+                </h3>
+                <p class="font-script text-gold-200 text-sm">Sarap na, Healthy pa! ♡</p>
+            </div>
+            <button onclick="toggleCartDrawer(false)" class="p-2 rounded-full bg-ube-800 hover:bg-ube-700 text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cart-items-container" class="p-5 flex-1 overflow-y-auto space-y-4">
+            <!-- Populated by JS -->
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-5 bg-ube-50 border-t border-ube-200 space-y-4">
+            <!-- Barcode Discount Banner -->
+            <div id="discount-banner" class="hidden bg-stevia-100 border border-stevia-500 text-stevia-700 px-3 py-2 rounded-xl text-xs font-bold flex items-center justify-between">
+                <span>🎉 Barcode 4806523451234 Scanned (15% OFF)</span>
+                <span id="discount-amount">-₱0</span>
+            </div>
+
+            <div class="space-y-1 text-sm">
+                <div class="flex justify-between text-ube-700">
+                    <span>Total Candies</span>
+                    <span id="cart-total-pieces" class="font-bold">0 pcs</span>
+                </div>
+                <div class="flex justify-between text-lg font-extrabold text-ube-900">
+                    <span>Total Amount</span>
+                    <span id="cart-total-price">₱0</span>
+                </div>
+            </div>
+
+            <button onclick="processCheckout()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-ube-700 to-ube-900 hover:from-ube-800 hover:to-black text-white font-extrabold text-sm shadow-lg border border-gold-400/50 transition">
+                Checkout Guilt-Free Treats →
+            </button>
+        </div>
+    </aside>
+
+    <!-- Floating Taste-Test / Toast Notification Box (No alert() used!) -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+    <script>
+        // --- State Variables ---
+        let isBackSide = false;
+        let barcodeDiscountApplied = false;
+
+        // Product Catalog Data Inspired by the Ube 3-in-1 Stevia Coffee Sachet
+        const PRODUCTS = [
+            {
+                id: 'ube-hard-pouch',
+                name: 'Classic 3-in-1 Ube Coffee Hard Candy',
+                subtitle: 'Original Sachet Foil Edition • 25 pcs (100g)',
+                price: 35,
+                pieces: 25,
+                caloriesPerPc: 10,
+                badge: 'BESTSELLER • ₱1.40/PC',
+                badgeColor: 'bg-ube-800 text-gold-200',
+                desc: 'Glass-glossy swirled purple yam & roasted espresso hard drops sweetened with Stevia leaf.',
+                icon: '🌀'
+            },
+            {
+                id: 'ube-soft-chews',
+                name: 'Creamy Ube Latte Soft Milk Chews',
+                subtitle: 'Velvety Nougat Texture • 20 pcs (100g)',
+                price: 42,
+                pieces: 20,
+                caloriesPerPc: 12,
+                badge: 'EXTRA CREAMY • ₱2.10/PC',
+                badgeColor: 'bg-stevia-600 text-white',
+                desc: 'Melt-in-your-mouth chewy ube halaya and non-dairy creamer chews with a gentle coffee aroma.',
+                icon: '🍬'
+            },
+            {
+                id: 'ube-espresso-bomb',
+                name: 'Center-Filled Ube Espresso Burst',
+                subtitle: 'Liquid Ube-Coffee Center • 20 pcs (100g)',
+                price: 45,
+                pieces: 20,
+                caloriesPerPc: 11,
+                badge: 'CAFFEINE KICK • ₱2.25/PC',
+                badgeColor: 'bg-amber-800 text-amber-100',
+                desc: 'Crunchy stevia-sweetened coffee shell hiding a luscious molten Ube Halaya cream core.',
+                icon: '☕'
+            },
+            {
+                id: 'barkada-fiesta-jar',
+                name: 'Sarap na, Healthy pa! Barkada Jar',
+                subtitle: 'Assorted 3-in-1 Tub • 100 pcs (400g)',
+                price: 120,
+                pieces: 100,
+                caloriesPerPc: 10,
+                badge: 'SULIT TUB • ₱1.20/PC',
+                badgeColor: 'bg-gold-500 text-ube-900',
+                desc: 'All three Ube Stevia Coffee candy styles in a reusable collector jar for home, baon, or office.',
+                icon: '🫙'
+            }
+        ];
+
+        // Initial Cart State
+        let cart = [
+            { id: 'ube-hard-pouch', qty: 1 },
+            { id: 'ube-soft-chews', qty: 1 }
+        ];
+
+        // --- 3D Pouch Front / Back Flip Logic ---
+        function flipCandyPack() {
+            setPackSide(!isBackSide);
+        }
+
+        function setPackSide(showBack) {
+            isBackSide = showBack;
+            const card = document.getElementById('pouch-3d-card');
+            const tabFront = document.getElementById('tab-front');
+            const tabBack = document.getElementById('tab-back');
+            const flipBtnText = document.getElementById('flip-btn-text');
+            if (isBackSide) {
+                card.classList.add('rotate-y-180');
+                tabBack.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition bg-ube-800 text-white shadow';
+                tabFront.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition text-ube-800 hover:bg-ube-100';
+                flipBtnText.textContent = 'Flip Pouch (See Front)';
+            } else {
+                card.classList.remove('rotate-y-180');
+                tabFront.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition bg-ube-800 text-white shadow';
+                tabBack.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition text-ube-800 hover:bg-ube-100';
+                flipBtnText.textContent = 'Flip Pouch (See Back)';
+            }
+        }
+
+        // --- 3-in-1 Candy Anatomy Switcher ---
+        const CANDY_STYLES = {
+            hard: {
+                badge: 'Hard Glossy Swirl Edition',
+                title: 'Classic 3-in-1 Ube Coffee Hard Drop',
+                desc: 'Slow-melting glass-glossy candy that lasts 8 minutes on the tongue, releasing waves of velvety Ube Halaya, sweet non-dairy creamer, and bold roasted Philippine coffee sweetened naturally with Stevia leaf.',
+                calories: 'Only 10 kcal per piece • 0g Refined Sugar',
+                coreColor: '#4A2574',
+                ube: 95,
+                coffee: 80,
+                stevia: 90
+            },
+            chew: {
+                badge: 'Soft Artisanal Nougat Chew',
+                title: 'Creamy Ube Latte Soft Milk Chew',
+                desc: 'Whipped non-dairy creamer and real purple yam folded with stevia leaf sweetness and a smooth latte finish. Chewy, pillowy, and never sticks to your teeth!',
+                calories: 'Only 12 kcal per piece • 0g Refined Sugar',
+                coreColor: '#9E6CD3',
+                ube: 100,
+                coffee: 65,
+                stevia: 95
+            },
+            burst: {
+                badge: 'Molten Center-Filled Bomb',
+                title: 'Center-Filled Espresso Ube Burst',
+                desc: 'Crack through the roasted Barako coffee outer shell to discover a rich, velvety liquid Ube-Stevia cream center—just like taking a fresh sip from the purple mug on our sachet!',
+                calories: 'Only 11 kcal per piece • 0g Refined Sugar',
+                coreColor: '#2B1406',
+                ube: 90,
+                coffee: 98,
+                stevia: 88
+            }
+        };
+
+        function selectCandyStyle(styleKey) {
+            const data = CANDY_STYLES[styleKey];
+            if (!data) return;
+
+            // Update button active styles
+            ['hard', 'chew', 'burst'].forEach(k => {
+                const btn = document.getElementById(`style-btn-${k}`);
+                if (k === styleKey) {
+                    btn.className = 'candy-style-btn px-5 py-3 rounded-2xl font-bold text-sm transition bg-ube-800 text-white shadow-md flex items-center gap-2';
+                } else {
+                    btn.className = 'candy-style-btn px-5 py-3 rounded-2xl font-bold text-sm transition bg-ube-100 text-ube-800 hover:bg-ube-200 flex items-center gap-2';
+                }
+            });
+
+            // Update text & SVG
+            document.getElementById('anatomy-badge').textContent = data.badge;
+            document.getElementById('anatomy-title').textContent = data.title;
+            document.getElementById('anatomy-desc').textContent = data.desc;
+            document.getElementById('anatomy-calories').textContent = data.calories;
+            document.getElementById('anatomy-core').setAttribute('fill', data.coreColor);
+
+            // Update progress bars
+            document.getElementById('bar-ube').style.width = `${data.ube}%`;
+            document.getElementById('bar-ube-val').textContent = `${data.ube}%`;
+            document.getElementById('bar-coffee').style.width = `${data.coffee}%`;
+            document.getElementById('bar-coffee-val').textContent = `${data.coffee}%`;
+            document.getElementById('bar-stevia').style.width = `${data.stevia}%`;
+            document.getElementById('bar-stevia-val').textContent = `${data.stevia}%`;
+        }
+
+        // --- Calorie & Stevia Sugar Calculator ---
+        function updateCalorieCalculator(dailyCount) {
+            const count = parseInt(dailyCount, 10);
+            document.getElementById('slider-count-label').textContent = `${count} ${count === 1 ? 'Candy' : 'Candies'} / day`;
+
+            // Regular candy has ~3.67g refined sugar per piece & 21.6 kcal vs our 10 kcal & 0g refined sugar
+            const monthlySugarSavedGrams = Math.round(count * 3.67 * 30);
+            const monthlyCaloriesSaved = Math.round(count * (21.6 - 10) * 30);
+            const coffeeCups = (count / 3).toFixed(1).replace('.0', '');
+
+            document.getElementById('calc-sugar-saved').textContent = `${monthlySugarSavedGrams.toLocaleString()}g`;
+            document.getElementById('calc-calories-saved').textContent = monthlyCaloriesSaved.toLocaleString();
+            document.getElementById('calc-coffee-cups').textContent = `${coffeeCups} ${coffeeCups === '1' ? 'Cup' : 'Cups'}`;
+        }
+
+        // --- Render Products & Shopping Cart Logic ---
+        function renderProductGrid() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = PRODUCTS.map(product => {
+                const perPiece = (product.price / product.pieces).toFixed(2);
+                return `
+                <div class="bg-white rounded-3xl p-6 border border-ube-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider ${product.badgeColor}">
+                                ${product.badge}
+                            </span>
+                            <span class="text-xs font-bold text-stevia-700 bg-stevia-100 px-2.5 py-1 rounded-lg">
+                                🍃 ${product.caloriesPerPc} kcal/pc
+                            </span>
+                        </div>
+
+                        <!-- Mini Visual Pouch Representation -->
+                        <div class="h-40 rounded-2xl bg-gradient-to-br from-ube-100 via-ube-200/70 to-ube-300/60 border border-ube-200 flex flex-col items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition">
+                            <div class="text-5xl mb-1 transform group-hover:rotate-12 transition">${product.icon}</div>
+                            <span class="font-display text-2xl text-ube-800 leading-none">Ube</span>
+                            <span class="text-[9px] font-extrabold uppercase tracking-widest text-ube-900 mt-0.5">3-IN-1 COFFEE CANDY</span>
+                        </div>
+
+                        <h3 class="font-extrabold text-lg text-ube-900 leading-snug">${product.name}</h3>
+                        <p class="text-xs font-bold text-ube-600 mt-0.5">${product.subtitle}</p>
+                        <p class="text-xs text-ube-700/80 mt-2 leading-relaxed">${product.desc}</p>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-ube-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-stevia-700 block font-extrabold">Only ₱${perPiece} / candy</span>
+                            <span class="text-2xl font-black text-ube-900">₱${product.price}</span>
+                        </div>
+                        <button onclick="addToCart('${product.id}')" class="px-4 py-2.5 rounded-xl bg-ube-800 hover:bg-ube-900 text-white font-extrabold text-xs shadow transition flex items-center gap-1.5">
+                            <span>+ Add to Bag</span>
+                        </button>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        function addToCart(productId) {
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id: productId, qty: 1 });
+            }
+            const product = PRODUCTS.find(p => p.id === productId);
+            renderCart();
+            showToast(`🍬 Added <strong>${product.name}</strong> to your Candy Bag!`);
+        }
+
+        function updateCartQty(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== productId);
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items-container');
+            const badge = document.getElementById('cart-badge');
+            const totalPiecesEl = document.getElementById('cart-total-pieces');
+            const totalPriceEl = document.getElementById('cart-total-price');
+            const discountBanner = document.getElementById('discount-banner');
+            const discountAmountEl = document.getElementById('discount-amount');
+
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            badge.textContent = totalCount;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 space-y-3">
+                        <div class="text-4xl">🍬</div>
+                        <p class="font-bold text-ube-900">Your Candy Bag is empty!</p>
+                        <p class="text-xs text-ube-600">Add a pouch of Ube 3-in-1 Stevia Coffee Candies to get started.</p>
+                    </div>
+                `;
+                totalPiecesEl.textContent = '0 pcs';
+                totalPriceEl.textContent = '₱0';
+                discountBanner.classList.add('hidden');
+                return;
+            }
+
+            let subtotal = 0;
+            let totalPieces = 0;
+
+            container.innerHTML = cart.map(item => {
+                const product = PRODUCTS.find(p => p.id === item.id);
+                const itemTotal = product.price * item.qty;
+                subtotal += itemTotal;
+                totalPieces += product.pieces * item.qty;
+
+                return `
+                    <div class="p-3.5 rounded-2xl bg-ube-50 border border-ube-200 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-xl bg-ube-200 flex items-center justify-center text-2xl shrink-0">
+                                ${product.icon}
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-xs sm:text-sm text-ube-900 leading-tight">${product.name}</h4>
+                                <span class="text-[11px] text-ube-600 font-semibold">₱${product.price} • ${product.pieces} candies</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="updateCartQty('${product.id}', -1)" class="w-7 h-7 rounded-lg bg-white border border-ube-300 font-bold text-ube-800 hover:bg-ube-100">-</button>
+                            <span class="text-xs font-extrabold w-5 text-center">${item.qty}</span>
+                            <button onclick="updateCartQty('${product.id}', 1)" class="w-7 h-7 rounded-lg bg-white border border-ube-300 font-bold text-ube-800 hover:bg-ube-100">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            let finalTotal = subtotal;
+            if (barcodeDiscountApplied) {
+                const discount = Math.round(subtotal * 0.15);
+                finalTotal = subtotal - discount;
+                discountBanner.classList.remove('hidden');
+                discountAmountEl.textContent = `-₱${discount}`;
+            } else {
+                discountBanner.classList.add('hidden');
+            }
+
+            totalPiecesEl.textContent = `${totalPieces} candies`;
+            totalPriceEl.textContent = `₱${finalTotal.toLocaleString()}`;
+        }
+
+        function toggleCartDrawer(open) {
+            const drawer = document.getElementById('cart-drawer');
+            const backdrop = document.getElementById('cart-drawer-backdrop');
+            if (open) {
+                backdrop.classList.remove('hidden');
+                setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+                drawer.classList.remove('translate-x-full');
+            } else {
+                backdrop.classList.add('opacity-0');
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            }
+        }
+
+        // --- Barcode Scanner Easter Egg & Interactive Candy Pop ---
+        function scanBarcodePromo() {
+            barcodeDiscountApplied = true;
+            renderCart();
+            showToast('🇵🇭 Barcode <strong>4 806523 451234</strong> verified! <strong>15% Sarap-Healthy Discount</strong> applied to your bag!');
+            toggleCartDrawer(true);
+        }
+
+        function triggerCandyPop() {
+            const messages = [
+                '🍬 *Crinkle!* You unwrapped an Ube 3-in-1 Candy—notes of warm purple yam, sweet cream & roasted espresso! (Only 10 kcal!)',
+                '🍃 *Sarap na, Healthy pa!* Sweetened naturally with Stevia leaf—0g added refined sugar!',
+                '☕ Pocket Brew Boost! 3 Ube Coffee Candies = 1 creamy cup of Ube Latte!'
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            showToast(randomMsg);
+        }
+
+        function processCheckout() {
+            if (cart.length === 0) {
+                showToast('Add at least one Ube Candy pouch before checking out!');
+                return;
+            }
+            showToast('🎉 Salamat! Your guilt-free Ube 3-in-1 Coffee Candy order is confirmed! Sarap na, Healthy pa! ♡');
+            cart = [];
+            renderCart();
+            setTimeout(() => toggleCartDrawer(false), 1200);
+        }
+
+        function showToast(htmlMessage) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'pointer-events-auto bg-ube-900 text-white border-2 border-gold-400 rounded-2xl p-4 shadow-2xl flex items-start gap-3 transform transition-all duration-300 translate-y-4 opacity-0';
+            toast.innerHTML = `
+                <div class="text-xl shrink-0">💜</div>
+                <div class="text-xs leading-relaxed flex-1">${htmlMessage}</div>
+            `;
+            container.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-y-4', 'opacity-0');
+            });
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-4', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 4200);
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProductGrid();
+            renderCart();
+        });
+    </script>
+</body>
+</html>
